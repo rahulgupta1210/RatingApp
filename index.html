@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="userController">
+    <div class="content" ng-init="getData()">
+        <header class="menunav">
+            <div class="row menu">
+                <div class="menuLeft">
+                    <input type="text" id="searchId" name="contactSearch" ng-model="c.name" placeholder="Search">
+                    <span class="fa fa-search iconSearch"></span>
+                </div>
+                <div class="menuRight">
+                    <div>User Name</div>
+                    <div>
+                        <img src="http://www.fillmurray.com/200/200">
+                    </div>
+                    <div class="user-detail"><span class="fa fa-angle-down"></span></div>
+                </div>
+            </div>
+        </header>
+        <div class="left-section" id="contactList">
+            <div class="contList" ng-repeat="c in peopleData| filter: c" ng-click="getPeopleDetails(c)">
+                <a>
+                <span >{{c.name}}</span>
+                </a>
+            </div>
+        </div>
+        <div class="right-section" id="contactDetail">
+            <div class="contactFirst">
+                <div class="contactFirstImg">
+                    <img id="contImg" src="{{result.img}}">
+                </div>
+                <div class="contactFirstLikes">
+                    <div>
+                        <button>Send Message!</button>
+                    </div>
+                    <div class="likes-desc" id="likeCount">
+                        <table>
+                            <tr>
+                                <td>
+                                    <span ng-repeat="star in getRating(result.rating) track by $index">
+                                           <span class="fa fa-heart checked"></span>
+                                    </span>
+                                    <span ng-repeat="star in getRating(5-result.rating) track by $index">
+                                            <span class="fa fa-heart-o iconColor"></span>
+                                     </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="desc-list">
+                <div id="desc">{{result.Description}}</div>
+                <div>
+                    <table class="tableAlign" cellpadding="0" cellspacing="0" border="0">
+                        <thead>
+                            <tr>
+                                <th>Likes</th>
+                                <th>Dislikes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="(key, values) in likesAndDislikes">
+                                <td ng-repeat="value in values track by $index">
+                                    {{ value }}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>

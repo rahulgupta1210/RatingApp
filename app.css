@@ -1,0 +1,187 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.content {
+	margin: 0 15px;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+}
+
+.menunav {
+	background: #ffffff;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+
+
+.menu {
+	height: 50px;
+}
+
+.menuLeft {
+	position: relative;
+	height: inherit;
+	float: left;
+	line-height: 50px;
+}
+
+.menuLeft input{
+	margin-left: 15px;
+    height: 21px;
+    border-radius: 8px;
+    border: 2px solid;
+    width: 130px;
+    padding: 0 30px;
+    outline: none;
+
+}
+
+.menuRight {
+	height: inherit;
+	float: right;
+	line-height: 50px;
+	padding-right: 60px;
+}
+
+.menuRight div {
+	float: left;
+}
+
+.menuRight img {
+	height: 50px;
+	padding-left: 10px;
+}
+
+.left-section {
+	width: 30%;
+	position: relative;
+	float: left;
+}
+
+.contList {
+	border-bottom: 2px solid;
+    border-right: 2px solid;
+    padding: 40px 10px;
+    cursor: pointer;
+    font-family: 'icomoon' !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+}
+
+.contList:hover {
+	background-color: #E5E5E5;
+}
+
+.contList.active {
+	background-color: #E5E5E5;
+}
+
+.contList.active::after {
+	content: "\e900";
+	float: right;
+}
+
+.right-section {
+	width: 50%;
+    float: left;
+    padding: 30px 50px;
+}
+
+ .clear {
+ 	clear: both;
+ }
+
+.contactFirst {
+ 	clear: both;
+ }
+
+.contactFirstImg {
+ 	float: left;
+ }
+
+.contactFirstImg img {
+ 	width: 130px;
+    border: 2px solid;
+ }
+
+.contactFirstLikes {
+ 	float: left;
+ 	padding: 0 30px;
+ }
+
+.contactFirstLikes button {
+ 	padding: 30px 30px;
+    border: 2px solid;
+    border-radius: 9px;
+    text-transform: uppercase;
+    cursor: pointer;
+ }
+
+.likes-desc {
+	padding-top: 20px;
+    font-size: 29px;
+}
+
+.desc-list {
+	clear: both;
+	margin-top: 20px;
+}
+
+.tableAlign {
+	width: 100%;
+	text-align: left;
+	border: 2px solid;
+	margin-top: 20px;
+}
+
+.tableAlign thead {
+	background-color: #CBCBCB;
+}
+
+th, td {
+	padding: 5px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FFF;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #E5E5E5;
+}
+
+.user-detail {
+	background-color: #E5E5E5;
+    border: 2px solid;
+    border-radius: 0 3px 3px 0;
+    height: 48px;
+}
+
+.user-detail span {
+	padding: 3px;
+	cursor: pointer;
+}
+
+.error {
+	color: red;
+	padding: 30px;
+}
+
+.iconSearch{
+	position: absolute;
+    left: 25px;
+    top: 19px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.iconColor{
+	color:#DDDDDD
+}
